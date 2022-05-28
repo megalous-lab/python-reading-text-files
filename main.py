@@ -7,11 +7,12 @@ def read_file_content(filename):
     # [assignment] Add your code here 
     with open(filename, "r") as f:
         return str(f.read().splitlines())
-    
 
-
+import string
 def count_words():
     text = read_file_content("./story.txt")
-    # [assignment] Add your code here
+    mapp = text.marketrans(string.punctuation, " "*32)
+    ff = text.translate(mapp)
+    text_list = ff.split
 
-    return {"as": 10, "would": 20}
+    return {i:text_list.count(i) for i in set(text_list)}
