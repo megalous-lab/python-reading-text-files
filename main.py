@@ -10,7 +10,7 @@ def read_file_content(filename):
 
 import string
 def count_words():
-    text = read_file_content("./story.txt")
+    text = read_file_content("story.txt")
     mapp = text.marketrans(string.punctuation, " "*32)
     ff = text.translate(mapp)
     text_list = ff.split
